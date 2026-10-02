@@ -1,141 +1,148 @@
-# Taeseung Kim — Equipment Control Software Engineer Portfolio
+# 김태승 (Kim Taeseung) — SW Engineer
 
-Equipment control software engineer with 5+ years of experience developing C#/.NET and C++ software for semiconductor handling and process equipment — memory test handlers, laser drilling, laser marking, and dispensing systems. Experienced across the full lifecycle, from requirement analysis and design to deployment and on-site debugging in customer cleanroom environments.
+반도체 패키징·검사 장비의 제어 소프트웨어를 만드는 SW Engineer입니다. 지난 5년간 C#(.NET)과 C++로 다축 모션 제어, 장비-호스트 통신, 로그 기반 진단 도구를 설계·구현해왔고, 요구사항 분석부터 양산 현장 디버깅까지 전체 과정을 직접 맡아왔습니다. 하드웨어와 소프트웨어가 맞닿는 지점에서 터지는 문제를 푸는 일을 가장 재미있어합니다.
 
 📧 tsnano99@gmail.com
 
 ---
 
+## 한눈에 보는 임팩트
+
+- **UPH 600 → 800 (+33%)** — 디스펜서 시퀀스 병목을 찾아내 재설계
+- **통신 성공률 99.9%** — 우선순위 큐 기반 명령 스케줄링 + 재시도/타임아웃 로직
+- **설정 시간 10분 → 1분 (−90%), 오차율 20% → 1% 미만** — 핀 배치 검증 도구
+- **로그 10만 건 이상 실시간 분석**, GPT 연동으로 1차 원인 진단 자동화
+- **해외 양산 현장(중국) 이슈를 30분 내 근본원인 규명** — 비전·통신·제어 로직 전 구간 추적
+
+---
+
 ## Core Competencies
 
-- **Multi-axis motion control** — 40+ axis synchronized motion, sequence profiling and bottleneck analysis, buffer-based look-ahead scheduling
-- **Equipment communication protocols** — TCP/IP, RS-232/485, SCPI; priority-queue command scheduling with retry/timeout handling for asynchronous device control
-- **SECS/GEM (HSMS) & MES integration** — host event reporting (S6F11) and process gating on host response (S6F12), adapted to customer-specific host implementations
-- **Hardware–software root-cause analysis** — isolating issues across vision hardware, communication, and control logic under live production constraints
-- **On-site field support** — cleanroom tool setup and production-line support at overseas customer sites (China, Vietnam)
-- **Self-directed tooling** — identifying recurring field problems and independently designing, building, and shipping internal diagnostic tools
+요즘 엔지니어에게 중요하다고 생각하는 순서대로 적었습니다.
+
+- **AI/LLM을 실무에 끌어들이는 능력** — GPT API를 연동해 로그 1차 진단을 자동화하는 도구를 직접 기획·구현
+- **데이터로 말하는 성능 개선** — 감이 아니라 로그·시퀀스 프로파일링으로 병목을 찾고, 수치로 성과를 증명
+- **동시성/비동기 설계** — 멀티스레드 통신, 우선순위 큐 기반 명령 스케줄링으로 경쟁 상태 없이 안정적인 장비 제어 구현
+- **확장 가능한 시스템 설계** — 상태 머신, 폴리모피즘 기반 구조로 장비 사양 변경에도 코드 수정 최소화
+- **표준 프로토콜 기반 장비-MES 통합** — SECS/GEM(HSMS)으로 호스트 연동, 고객사마다 다른 스펙 해석 차이 대응
+- **현장 근본원인 분석** — 하드웨어·통신·제어 로직을 넘나들며 문제를 좁혀가는 트러블슈팅
+- **자기주도적 도구 개발** — 누가 시키지 않아도 현장의 반복 문제를 찾아 스스로 기획하고 만듦
 
 ## Tech Stack
 
-| Category | Details |
+| 분류 | 내용 |
 |---|---|
 | Languages & Frameworks | C# (.NET Framework, WinForms), C++, Python |
-| Software Design | Object-oriented design, state machine pattern, multi-threaded asynchronous processing, priority-queue scheduling |
-| Communication | TCP/IP, RS-232, RS-485, SECS/GEM (SECS-II, HSMS), SCPI |
+| Software Design | 객체지향 설계, State Machine 패턴, 멀티스레드 비동기 처리, 우선순위 큐 스케줄링 |
+| Communication | TCP/IP, RS-232/485, SECS/GEM(SECS-II, HSMS), SCPI |
 | Data & Visualization | SQLite, MySQL, OpenGL, pandas, matplotlib |
 | Tools | Git, SVN, Bitbucket, Jira, Visual Studio |
-| Others | Quadtree spatial partitioning, DXF/Gerber import, LLM API integration (OpenAI/Claude) |
+| Others | Quadtree 공간 분할, DXF/Gerber 임포트, LLM API 연동(OpenAI/Claude) |
 
 ## Experience Summary
 
-| Period | Company | Key Responsibilities |
+| 기간 | 회사 | 주요 업무 |
 |---|---|---|
-| Mar 2026 – Present | APTEC Co., Ltd. | Control software for semiconductor packaging equipment (dispensing, stiffener attach, laser marking) |
-| Feb 2024 – Mar 2026 | KOSES Co., Ltd. | Laser/scanner equipment control software; requirement analysis through deployment |
-| Jan 2022 – Mar 2023 | EO Technics Co., Ltd. | Multi-axis motion control for laser drilling equipment; overseas cleanroom setup (Vietnam) |
-| Jul 2020 – Sep 2021 | Techwing Inc. | Memory test handler control logic development and on-site troubleshooting |
+| 2026.03 ~ 현재 | 에이피텍 | 반도체 패키징 장비(디스펜싱·스티프너 어태치·레이저 마킹) 제어 SW |
+| 2024.02 ~ 2026.02 | 코세스 | 레이저·스캐너 장비 제어 SW, 요구사항 분석부터 배포까지 |
+| 2022.01 ~ 2023.03 | 이오테크닉스 | 레이저 드릴링 장비 다축 모션 제어, 베트남 현장 셋업 지원 |
+| 2020.07 ~ 2021.09 | 테크윙 | 메모리 핸들러 제어 로직 개발 및 현장 트러블슈팅 |
 
 ---
 
 ## Projects
 
-### 1. Dispenser Sequence Optimization (UPH +33%)
+### 1. GPT 연동 로그 분석 도구 — 진단 시간 단축
 
-**Context**: A 40+ axis dispenser's throughput was capped by an unidentified wait bottleneck in the index-axis motion sequence.
+장비 로그를 사람이 눈으로 뒤지면서 원인을 찾는 방식이 너무 느리다고 느껴서 혼자 기획해 만든 도구입니다.
 
-**Approach**
-- Profiled 48 production sequences through log analysis to pinpoint where the index axis stalled waiting on upstream steps
-- Redesigned the flow with buffer-based look-ahead processing, allowing downstream axes to proceed without waiting on strict step completion
-- Structured magazine and tray handling as a state machine with pre-execution map re-validation to preserve data consistency under the new flow
+- 10만 건 이상의 로그를 SQLite에 스트리밍·인덱싱해서, 시간/레벨/모듈/키워드로 바로 검색할 수 있도록 구성
+- 대용량 데이터를 그대로 그리면 UI가 멎어서, WinForms Virtual Mode로 렌더링을 최적화
+- GPT API를 붙여서 "이 구간 로그에서 무슨 일이 있었는지" 자연어로 물어보면 1차 진단을 뽑아주는 기능 추가
+- 에러 추이를 자동으로 시각화해서 패턴을 눈으로 바로 확인 가능하도록 처리
 
-**Result**: Increased UPH from 600 to 800 (+33%) with no loss of placement accuracy or data integrity
-
----
-
-### 2. Multi-threaded Laser Communication Module (99.9% Success Rate)
-
-**Context**: A laser controller accepted only one command at a time, but both interactive UI commands and a periodic status-polling thread needed to issue commands concurrently without blocking or corrupting state.
-
-**Approach**
-- Implemented 40+ SCPI commands over TCP/IP and RS-232
-- Serialized asynchronous UI commands and periodic polling through a single priority queue, so polling never starved or collided with user-initiated commands
-- Added retry and timeout handling around each transaction to recover from transient communication failures
-
-**Result**: Achieved a 99.9% communication success rate in production operation
+**결과**: 로그 원인 분석에 들던 수작업 시간을 크게 줄였고, 엔지니어마다 들쭉날쭉하던 1차 진단 품질을 도구로 표준화
 
 ---
 
-### 3. Precision Pin-Placement Verification Tool
+### 2. 디스펜서 시퀀스 최적화 — UPH 600 → 800 (+33%)
 
-**Context**: Fixture pin layouts were verified manually against DXF/Gerber design files, which was slow and error-prone at micron-level tolerances.
+40축 이상 디스펜서의 생산성이 어딘가에서 막혀 있다는 건 알았지만, 정확히 어디가 병목인지는 아무도 모르고 있었습니다.
 
-**Approach**
-- Imported industry-standard DXF/Gerber design files and visualized pins, fiducials, leads, and components by layer using OpenGL
-- Implemented µm-level interference (overlap) checks using quadtree spatial partitioning for efficient proximity queries
-- Built an extensible, polymorphism-based shape model so new component/pin shapes could be added without changing the core verification logic
+- 48개 생산 시퀀스를 로그 기반으로 프로파일링해서 인덱스 축이 불필요하게 대기하는 구간을 특정
+- 뒷 공정이 앞 공정의 완전한 종료를 기다리지 않도록 버퍼 기반 룩어헤드(look-ahead) 방식으로 흐름 재설계
+- 매거진·트레이 처리 흐름은 State Machine으로 구조화하고, 실행 전 맵 재검증 로직을 넣어 데이터 정합성 확보
 
-**Result**: Reduced setup/verification time from 10 minutes to 1 minute and error rate from 20% to under 1%
-
----
-
-### 4. Log Analysis Tool with AI-assisted Diagnostics
-
-**Context**: Diagnosing equipment faults required manually searching through large, unstructured log files — slow and inconsistent across engineers.
-
-**Approach**
-- Streamed and indexed 100,000+ log records into SQLite, with search/filtering by time, level, module, and keyword
-- Optimized large-dataset display using WinForms Virtual Mode to keep the UI responsive at scale
-- Integrated an LLM (GPT-based) log Q&A feature so engineers could ask natural-language questions about a session's logs
-- Added automated error-trend visualization to support pattern recognition over time
-
-**Result**: Substantially reduced time-to-diagnosis and gave engineers a consistent first-pass triage tool
+**결과**: UPH를 600에서 800으로(+33%) 끌어올리면서도 배치 정확도와 데이터 정합성은 그대로 유지
 
 ---
 
-### 5. SECS/GEM (HSMS) MES Integration
+### 3. 멀티스레드 레이저 통신 모듈 — 통신 성공률 99.9%
 
-**Context**: Dispensing equipment needed to report production data to the customer's MES and respect host-controlled process gating, with each customer's host interpreting the standard slightly differently.
+레이저 컨트롤러가 한 번에 명령 하나만 처리할 수 있는 구조였는데, UI에서 들어오는 명령과 주기적인 상태 폴링이 동시에 충돌하는 게 문제였습니다.
 
-**Approach**
-- Implemented SECS/GEM over HSMS, reporting lot and quantity data via S6F11 event reports
-- Gated process start on the host's S6F12 response rather than proceeding unconditionally
-- Resolved host-specific interpretation differences through integration testing with each customer
+- TCP/IP와 RS-232로 40개 이상의 SCPI 명령을 구현
+- UI 명령과 폴링 스레드를 하나의 우선순위 큐로 직렬화해서, 폴링이 사용자 명령을 가로막거나 서로 꼬이지 않도록 처리
+- 트랜잭션마다 재시도·타임아웃 로직을 붙여 일시적인 통신 실패에서 자동 복구되도록 구성
 
-**Result**: Stable MES integration across multiple customer hosts with correct event sequencing and process gating
+**결과**: 실제 양산 환경에서 통신 성공률 99.9% 달성
 
 ---
 
-### 6. Automatic Serial Device Discovery Tool
+### 4. SECS/GEM(HSMS) MES 연동
 
-**Context**: In a field with many types of serial-connected peripherals (temperature controllers, pulse heaters, air controllers, precision scales), manually mapping COM ports to devices was a recurring source of human error — the problem was self-identified and the tool was independently designed and built.
+디스펜싱 장비가 고객 MES에 생산 데이터를 보고하고, 호스트의 승인 없이는 공정이 시작되지 않도록 만드는 작업이었습니다. 문제는 고객사마다 표준을 조금씩 다르게 해석한다는 점이었습니다.
 
-**Approach**
-- Iterated over COM port × baud rate combinations, sending each device type's identify command and validating the response against known device signatures
-- Modularized device-recognition logic with a probe pattern, so new device types could be registered in the field without recompilation
-- Used asynchronous processing to scan multiple ports concurrently while keeping the UI responsive
+- SECS/GEM(HSMS)을 구현해 S6F11 이벤트 리포트로 Lot·수량 데이터를 보고
+- 호스트의 S6F12 응답을 받기 전까지는 공정이 시작되지 않도록 게이팅 처리
+- 고객사별로 다른 스펙 해석 차이는 통합 테스트를 반복하며 하나씩 맞춰감
 
-**Conceptual flow** *(simplified pseudocode for illustration, not the actual implementation)*
+**결과**: 여러 고객사 호스트 환경에서 이벤트 순서와 공정 게이팅이 어긋나지 않는 안정적인 MES 연동 확보
+
+---
+
+### 5. 정밀 핀 배치 검증 도구 — 설정 10분 → 1분, 오차율 20% → 1% 미만
+
+가공 전 고정핀 배치를 DXF/Gerber 도면과 맞춰보는 작업을 전부 수작업으로 하고 있었고, 미세한 간섭을 눈으로 놓치는 경우가 잦았습니다.
+
+- DXF/Gerber 도면을 임포트해서 핀·기준점·리드·컴포넌트를 레이어별로 OpenGL로 시각화
+- Quadtree 기반 공간 분할로 µm 단위 간섭(overlap) 검사를 빠르게 처리
+- 폴리모피즘 기반으로 도형 모델을 설계해서, 새로운 부품·핀 형상이 추가돼도 핵심 검증 로직은 그대로 재사용
+
+**결과**: 설정·검증 시간을 10분에서 1분으로, 오차율을 20%에서 1% 미만으로 줄임
+
+---
+
+### 6. 시리얼 장비 자동 탐지 도구
+
+온도 컨트롤러, 펄스 히터, 에어 컨트롤러, 정밀 저울 등 다양한 시리얼 장비가 섞여 있는 현장에서, 어떤 COM 포트에 어떤 장비가 물려 있는지 매번 수작업으로 확인하다 발생하는 휴먼에러가 반복됐습니다. 누가 시킨 일이 아니라 직접 문제를 찾아서 만든 도구입니다.
+
+- COM 포트 × Baudrate 조합을 순회하며 장비별 식별 커맨드를 보내고 응답을 검증해 자동으로 장비 종류를 판별
+- 프로브(Probe) 패턴으로 장비별 인식 로직을 모듈화해서, 재컴파일 없이 현장에서 신규 장비 규격을 바로 등록할 수 있도록 설계
+- 비동기 처리로 여러 포트를 동시에 스캔하면서도 UI 응답성 유지
+
+**개념 설명용 의사코드** *(실제 구현이 아닌 흐름 설명용)*
 ```
 for each COM port:
-    for each candidate baud rate:
+    for each candidate baudrate:
         open connection
         send identify_command
         response = read_response(timeout)
         if validate(response) matches known device signature:
-            register device(port, baud_rate, device_type)
+            register device(port, baudrate, device_type)
 ```
 
-**Result**: New devices could be onboarded in the field without code changes, eliminating the manual-identification errors it replaced
+**결과**: 신규 장비가 들어와도 코드 수정 없이 현장에서 바로 대응 가능해졌고, 수작업 확인 과정에서 나던 인식 오류가 사라짐
 
 ---
 
-## Field Debugging Highlight
+## 현장 디버깅 사례
 
-While supporting a customer production line in China from tool setup through stable auto-run, vision calibration values intermittently failed to apply. By narrowing the scope step by step — vision hardware, communication, then control logic — the root cause was identified within 30 minutes and the fix was verified by reproducing the original failure conditions.
+중국 고객사 라인 셋업부터 안정적인 자동 운전 전환까지 지원하던 중, 비전 캘리브레이션 값이 간헐적으로 적용되지 않는 문제가 발생했습니다. 비전 하드웨어 → 통신 → 제어 로직 순으로 범위를 좁혀가며 추적한 끝에 30분 만에 근본 원인을 찾아냈고, 동일 조건을 재현해 수정이 맞는지 검증까지 마쳤습니다.
 
 ---
 
 ## Note
 
-- Projects reflect actual work performed in production roles. Source code is proprietary to each employer and is not published here; this portfolio describes approach, design decisions, and measured results.
-- Code snippets shown are simplified, generalized pseudocode for illustration — not the actual implementation.
+- 위 프로젝트는 실제 재직 중 수행한 업무를 기반으로 하되, 소스코드는 회사 자산이라 공개하지 않고 접근 방식과 결과 중심으로 정리했습니다.
+- 코드 예시는 실제 구현이 아닌 개념 설명을 위한 일반화된 의사코드입니다.
